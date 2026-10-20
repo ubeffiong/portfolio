@@ -868,3 +868,88 @@ main details.more > summary { border-radius: 999px; }
 
 /* Footer as a dark panel */
 .site-footer { background: var(--ink-panel); }
+
+/* ===================== Multi-page structure ===================== */
+/* Sub-page header: sits under the fixed nav */
+.page-header { margin-top: calc(var(--nav-h) + 16px); padding: 56px 0 52px; }
+.page-header .chapter-title { font-size: clamp(2rem, 4.6vw, 3rem); margin: 4px 0 10px; }
+.page-header .chapter-lede { max-width: 560px; font-size: 1.05rem; }
+.crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: .82rem; color: rgba(255, 255, 255, .65); margin-bottom: 14px; }
+.crumbs a { color: rgba(255, 255, 255, .85); }
+.crumbs a:hover { color: #fff; }
+.crumbs i { font-size: .65rem; opacity: .6; }
+.crumbs [aria-current] { color: #9fe9eb; font-weight: 600; }
+body:not([data-page="index"]) .site-nav { background: color-mix(in srgb, var(--canvas) 92%, transparent); }
+
+/* Current page in the menu */
+.nav-group.is-current > .nav-group-btn, .nav-single.is-current { color: var(--accent); background: var(--accent-soft); }
+
+/* Explore grid on the home page */
+.explore-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+@media (max-width: 380px) { .explore-grid { grid-template-columns: 1fr; } }
+.explore-card { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; align-items: start; color: var(--text); padding: 22px; }
+.explore-card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: 0 14px 34px rgba(16, 24, 40, .08); }
+.explore-card > i { font-size: 1.5rem; color: var(--accent); width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: var(--accent-soft); }
+.explore-card h3 { font-size: 1.1rem; margin: 2px 0 4px; }
+.explore-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+.explore-go { grid-column: 2; font-size: .85rem; font-weight: 700; color: var(--accent); display: inline-flex; gap: 6px; align-items: center; margin-top: 6px; }
+.explore-card:hover .explore-go i { transform: translateX(3px); }
+.explore-go i { transition: transform .15s; }
+main section.alt .explore-cta { background: var(--accent); color: #fff; }
+.explore-cta > i { background: rgba(255, 255, 255, .18); color: #fff; }
+.explore-cta p, .explore-cta .explore-go { color: rgba(255, 255, 255, .9); }
+@media (prefers-color-scheme: dark) { main section.alt .explore-cta { color: var(--ink); } .explore-cta p, .explore-cta .explore-go { color: var(--ink); } }
+
+/* Previous / next pager */
+.page-pager {
+  max-width: 1280px; margin: var(--panel-gap) auto 0; margin-inline: max(12px, calc((100% - 1280px) / 2));
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--panel-gap);
+}
+@media (max-width: 700px) { .page-pager { margin-inline: 8px; } }
+.pager-link {
+  display: flex; flex-direction: column; gap: 4px; padding: 26px 28px; border-radius: var(--panel-radius);
+  background: var(--panel); color: var(--text); transition: transform .15s, box-shadow .15s;
+}
+.pager-link:hover { text-decoration: none; transform: translateY(-2px); box-shadow: 0 14px 34px rgba(16, 24, 40, .08); }
+.pager-link span { font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); display: inline-flex; gap: 6px; align-items: center; }
+.pager-link strong { font-size: clamp(1.1rem, 2.4vw, 1.45rem); letter-spacing: -.02em; }
+.pager-link.next { text-align: right; align-items: flex-end; grid-column: 2; }
+@media (max-width: 520px) { .page-pager { grid-template-columns: 1fr; } .pager-link.next { grid-column: 1; } }
+
+/* Portrait in the home intro */
+.intro-portrait { margin: 0; width: 300px; aspect-ratio: 3 / 4; border-radius: 22px; overflow: hidden; background: var(--inset); }
+.intro-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; }
+@media (max-width: 760px) { .intro-portrait { width: 100%; max-width: 360px; aspect-ratio: 4 / 5; order: -1; } }
+.contact-avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin: 0 auto 14px; display: block; }
+main section.alt .explore-cta h3 { color: #fff; }
+@media (prefers-color-scheme: dark) { main section.alt .explore-cta h3 { color: var(--ink); } }
+
+/* Simplified contact page */
+.page-header-compact { padding: 48px 0 44px; }
+.page-header-compact .chapter-lede { max-width: 640px; }
+mark.hl-dark { --hl: rgba(60, 195, 200, .45); color: #fff; }
+.book-layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(260px, 1fr); gap: 22px; align-items: start; }
+@media (max-width: 900px) { .book-layout { grid-template-columns: 1fr; } }
+.book-title { font-size: clamp(1.4rem, 2.6vw, 1.8rem); letter-spacing: -.02em; margin-bottom: 6px; }
+.book-sub { margin-top: 0; }
+.book-direct { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; margin: 4px 0 0; }
+.book-direct a { font-weight: 600; }
+.book-layout .contact-card { position: sticky; top: calc(var(--nav-h) + 20px); text-align: center; padding: 32px 24px; }
+.contact-name { font-size: 1.25rem; margin: 0 0 4px; }
+.contact-lines { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 8px; }
+.contact-lines a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px; border-radius: 999px; background: var(--inset-alt); color: var(--text); font-weight: 600; font-size: .92rem; word-break: break-all; }
+.contact-lines a:hover { text-decoration: none; color: var(--accent); }
+.contact-lines i { color: var(--accent); }
+main section:not(.alt) .contact-card .contact-lines a { background: var(--panel); }
+@media (max-width: 900px) { .book-layout .contact-card { position: static; } }
+
+/* Portrait on the left in the home intro */
+#intro .hero-grid { grid-template-columns: 300px minmax(0, 1fr); gap: 48px; }
+#intro .intro-portrait { order: -1; }
+@media (max-width: 760px) { #intro .hero-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+/* Small portraits in some page headers */
+.page-header .chapter-label { align-items: center; }
+.page-header-photo { width: 104px; height: 104px; border-radius: 50%; object-fit: cover; flex: 0 0 auto; box-shadow: 0 0 0 3px rgba(255, 255, 255, .18); }
+@media (max-width: 520px) { .page-header .chapter-label { flex-direction: column; align-items: flex-start; } .page-header-photo { width: 80px; height: 80px; } }
+#intro .hero-grid { align-items: start; }

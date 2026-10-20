@@ -204,7 +204,11 @@
       btn.href = url;
       btn.target = "_blank";
       btn.rel = "noopener";
-      btn.querySelector("span").textContent = "Pick a time on my calendar";
+      btn.hidden = false;
+      const direct = btn.closest(".book-direct");
+      if (direct) direct.hidden = false;
+      const label = btn.querySelector("span");
+      if (label) label.textContent = "Pick a time on my calendar";
     } else if (bookForm) {
       btn.addEventListener("click", () => {
         const value = btn.dataset.book === "zoom" ? "Zoom" : "Google Meet";
@@ -333,6 +337,11 @@
       btn.addEventListener("click", () => window.open(btn.querySelector("img").src, "_blank"))
     );
   }
+
+  // Deep links between pages: work.html?filter=… and gallery.html?tab=…
+  const params = new URLSearchParams(location.search);
+  if (params.get("filter") && filters.some((f) => f.dataset.filter === params.get("filter"))) applyFilter(params.get("filter"));
+  if (params.get("tab") && galleryTabs.some((t) => t.dataset.gallery === params.get("tab"))) showGallery(params.get("tab"));
 
   // Back to top
   const toTop = document.querySelector(".to-top");
