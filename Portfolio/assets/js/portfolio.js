@@ -338,6 +338,17 @@
     );
   }
 
+  // Results at a glance: topic tabs
+  const impactTabs = [...document.querySelectorAll("[data-impact]")];
+  impactTabs.forEach((t) =>
+    t.addEventListener("click", () => {
+      impactTabs.forEach((x) => x.setAttribute("aria-pressed", x === t));
+      document.querySelectorAll(".impact-card").forEach((c) => {
+        c.hidden = t.dataset.impact !== "all" && c.dataset.group !== t.dataset.impact;
+      });
+    })
+  );
+
   // Deep links between pages: work.html?filter=… and gallery.html?tab=…
   const params = new URLSearchParams(location.search);
   if (params.get("filter") && filters.some((f) => f.dataset.filter === params.get("filter"))) applyFilter(params.get("filter"));

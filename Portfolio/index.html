@@ -216,21 +216,92 @@
           <h2>Results <mark class="hl">at a glance</mark></h2>
           <p>Measured outcomes from my work. Figures come from programme reports and evaluations.</p>
         </div>
-        <ul class="impact">
-          <li><span class="k">6 → 37</span><p>DAVT went from the six IHVN-supported states at launch (Sep 2022) to all 36 states and the FCT from January 2024, and is now owned by NCDC.<span class="ctx">DAVT · national rollout</span></p></li>
-          <li><span class="k">5–6 wks<br>→ real time</span><p>Weekly Epidemiological Report production automated through DAVT, from a manual process taking 5–6 weeks to near-real-time generation.<span class="ctx">DAVT · NCDC &amp; state PHEOCs</span></p></li>
-          <li><span class="k">15+ min<br>→ &lt;3 min</span><p>Time to download a large SORMAS dataset after the new download manager (it previously often failed), with 40% less staff time spent extracting data by hand.<span class="ctx">SORMAS optimisation</span></p></li>
-          <li><span class="k">92%</span><p>Reduction in data-retrieval latency after SORMAS optimisation; 100% of users confirmed faster loading and 96% confirmed accurate role-based access.<span class="ctx">23-item mixed-methods validation · 4 levels</span></p></li>
-          <li><span class="k">39.6%</span><p>Relative improvement in Yellow Fever electronic-to-paper concordance (1.64 in 2022 → 0.99 in 2025) through Surveillance Data Quality Management.<span class="ctx">SDQM · scaled to 7 states</span></p></li>
-          <li><span class="k">18</span><p>Disease-specific electronic Case Investigation Forms redesigned (Lassa fever, Yellow Fever, Mpox, Cholera, Measles, CSM, Diphtheria, COVID-19 and more).<span class="ctx">SORMAS · IDSR-aligned logic</span></p></li>
-          <li><span class="k">40+</span><p>Functional and technical SORMAS issues triaged and remediated before national go-live; a 19-version gap (v1.82 → v1.101) identified.<span class="ctx">SORMAS desk review &amp; upgrade</span></p></li>
-          <li><span class="k">63% → 82%</span><p>Mean assessment scores of NCDC Public Health Informatics officers after my Learn–Do–Sustain programme (+18.4 points); all 15 participants in the advanced workshop built a working database application.<span class="ctx">Workforce development</span></p></li>
-          <li><span class="k">25+</span><p>Hospitals and facilities supported on Health-in-a-Box HMIS across clinical, diagnostic, administrative and financial workflows.<span class="ctx">Health-in-a-Box Solutions</span></p></li>
-          <li><span class="k">25 FHIs</span><p>Federal health institutions (15 teaching hospitals, 7 FMCs, 3 specialist hospitals) connected to the Informatics Dashboard I product-managed at the Federal Ministry of Health.<span class="ctx">Informatics Dashboard · FMoH</span></p></li>
-          <li><span class="k">460+ models<br>160+ makers</span><p>Laboratory analysers connected through LiSphere Connector, the connectivity product I created and own. It covers chemistry, haematology, immunoassay, molecular, microbiology, coagulation, urinalysis and blood bank.<span class="ctx">LiSphere · owner &amp; creator</span></p></li>
-          <li><span class="k">Bidirectional</span><p>LIS interfaces built at National Hospital Abuja with Abbott, Roche Cobas, Selectra and Sysmex analysers, cutting manual result transcription.<span class="ctx">National Hospital Abuja</span></p></li>
-          <li><span class="k">24 hospitals</span><p>Phase 1 pilot target for NHEx, the national health exchange I architected, connecting federal teaching hospitals to shared patient, facility and health-worker registries. The pilot is in progress.<span class="ctx">NHEx · National Health Exchange</span></p></li>
-          <li><span class="k">25</span><p>GEEKS Cohort 4 participants mentored in health informatics, data management and governance; programme reported a 20% gain in data-management skills.<span class="ctx">Mentorship</span></p></li>
+
+        <div class="impact-hero">
+          <a class="ih" href="work.html#case-davt"><span class="ih-num">37</span><span class="ih-lbl">states &amp; FCT use DAVT, my national surveillance analytics platform</span></a>
+          <a class="ih" href="work.html#case-sormas"><span class="ih-num">92%</span><span class="ih-lbl">less waiting for data after the SORMAS optimisation</span></a>
+          <a class="ih" href="work.html#case-hnb"><span class="ih-num">25+</span><span class="ih-lbl">hospitals running the Health-in-a-Box HMIS</span></a>
+          <a class="ih" href="lab.html#lab-connectivity"><span class="ih-num">460+</span><span class="ih-lbl">analyser models connected through LiSphere</span></a>
+        </div>
+
+        <div class="impact-tabs" role="group" aria-label="Filter results">
+          <button class="filter" type="button" data-impact="all" aria-pressed="true">All <span class="tab-count">14</span></button>
+          <button class="filter" type="button" data-impact="surveillance" aria-pressed="false"><i class="bi bi-activity"></i> Surveillance <span class="tab-count">7</span></button>
+          <button class="filter" type="button" data-impact="hospitals" aria-pressed="false"><i class="bi bi-hospital"></i> Hospitals &amp; labs <span class="tab-count">5</span></button>
+          <button class="filter" type="button" data-impact="capacity" aria-pressed="false"><i class="bi bi-people"></i> People &amp; capacity <span class="tab-count">2</span></button>
+        </div>
+
+        <ul class="impact-grid">
+          <li class="impact-card" data-group="surveillance">
+            <div class="ic-delta"><span class="ic-from"><small>Launch states</small>6</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span class="ic-to"><small>Since Jan 2024</small>37</span></div>
+            <p>DAVT went from the six IHVN-supported states at launch (Sep 2022) to all 36 states and the FCT from January 2024, and is now owned by NCDC.</p>
+            <div class="ic-foot"><span class="ctx">DAVT · national rollout</span><a href="work.html#case-davt">DAVT case study <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="surveillance">
+            <div class="ic-delta"><span class="ic-from"><small>Before</small>5–6 wks</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span class="ic-to"><small>After</small>Real time</span></div>
+            <p>Weekly Epidemiological Report production automated through DAVT, from a manual process taking 5–6 weeks to near-real-time generation.</p>
+            <div class="ic-foot"><span class="ctx">DAVT · NCDC &amp; state PHEOCs</span><a href="work.html#case-davt">DAVT case study <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="surveillance">
+            <div class="ic-delta"><span class="ic-from"><small>Before</small>15+ min</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span class="ic-to"><small>After</small>&lt;3 min</span></div>
+            <p>Time to download a large SORMAS dataset after the new download manager (it previously often failed), with 40% less staff time spent extracting data by hand.</p>
+            <div class="ic-foot"><span class="ctx">SORMAS optimisation</span><a href="work.html#case-sormas">SORMAS case study <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="surveillance">
+            <div class="ic-num">92%<small>faster retrieval</small></div>
+            <p>Reduction in data-retrieval latency after SORMAS optimisation; 100% of users confirmed faster loading and 96% confirmed accurate role-based access.</p>
+            <div class="ic-foot"><span class="ctx">23-item mixed-methods validation · 4 levels</span><a href="work.html#case-sormas">SORMAS case study <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="surveillance">
+            <div class="ic-delta"><span class="ic-from"><small>2022 ratio</small>1.64</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span class="ic-to"><small>2025 ratio</small>0.99</span></div><span class="ic-badge">39.6% better</span>
+            <p>Relative improvement in Yellow Fever electronic-to-paper concordance (1.64 in 2022 → 0.99 in 2025) through Surveillance Data Quality Management.</p>
+            <div class="ic-foot"><span class="ctx">SDQM · scaled to 7 states</span><a href="work.html#case-davt">DAVT &amp; SDQM <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="surveillance">
+            <div class="ic-num">18<small>disease forms</small></div>
+            <p>Disease-specific electronic Case Investigation Forms redesigned (Lassa fever, Yellow Fever, Mpox, Cholera, Measles, CSM, Diphtheria, COVID-19 and more).</p>
+            <div class="ic-foot"><span class="ctx">SORMAS · IDSR-aligned logic</span><a href="work.html#case-sormas">SORMAS case study <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="surveillance">
+            <div class="ic-num">40+<small>issues fixed</small></div>
+            <p>Functional and technical SORMAS issues triaged and remediated before national go-live; a 19-version gap (v1.82 → v1.101) identified.</p>
+            <div class="ic-foot"><span class="ctx">SORMAS desk review &amp; upgrade</span><a href="work.html#case-sormas">SORMAS case study <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="capacity">
+            <div class="ic-bar" role="img" aria-label="Average score rose from 63.3% to 81.7%"><span class="ic-bar-fill" style="width:81.7%"></span><span class="ic-bar-mark" style="left:63.3%"></span></div><div class="ic-bar-labels"><span>Before 63.3%</span><strong>After 81.7%</strong></div>
+            <p>Mean assessment scores of NCDC Public Health Informatics officers after my Learn–Do–Sustain programme (+18.4 points); all 15 participants in the advanced workshop built a working database application.</p>
+            <div class="ic-foot"><span class="ctx">Workforce development</span><a href="research.html#teaching">Teaching <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="hospitals">
+            <div class="ic-num">25+<small>hospitals</small></div>
+            <p>Hospitals and facilities supported on Health-in-a-Box HMIS across clinical, diagnostic, administrative and financial workflows.</p>
+            <div class="ic-foot"><span class="ctx">Health-in-a-Box Solutions</span><a href="work.html#case-hnb">Health-in-a-Box case study <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="hospitals">
+            <div class="ic-num">25<small>federal institutions</small></div>
+            <p>Federal health institutions (15 teaching hospitals, 7 FMCs, 3 specialist hospitals) connected to the Informatics Dashboard I product-managed at the Federal Ministry of Health.</p>
+            <div class="ic-foot"><span class="ctx">Informatics Dashboard · FMoH</span><a href="work.html#case-hnb">Health-in-a-Box case study <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="hospitals">
+            <div class="ic-num">460+<small>analyser models</small></div>
+            <p>Laboratory analysers connected through LiSphere Connector, the connectivity product I created and own. It covers chemistry, haematology, immunoassay, molecular, microbiology, coagulation, urinalysis and blood bank.</p>
+            <div class="ic-foot"><span class="ctx">LiSphere · owner &amp; creator</span><a href="lab.html#lab-connectivity">Lab connectivity <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="hospitals">
+            <div class="ic-num">4<small>analyser brands, two-way</small></div>
+            <p>LIS interfaces built at National Hospital Abuja with Abbott, Roche Cobas, Selectra and Sysmex analysers, cutting manual result transcription.</p>
+            <div class="ic-foot"><span class="ctx">National Hospital Abuja</span><a href="work.html#case-nha">Hospital LIMS case study <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="hospitals">
+            <div class="ic-num">24<small>teaching hospitals targeted</small></div>
+            <p>Phase 1 pilot target for NHEx, the national health exchange I architected, connecting federal teaching hospitals to shared patient, facility and health-worker registries. The pilot is in progress.</p>
+            <div class="ic-foot"><span class="ctx">NHEx · National Health Exchange</span><a href="work.html#case-nhex">NHEx case study <i class="bi bi-arrow-right"></i></a></div>
+          </li>
+          <li class="impact-card" data-group="capacity">
+            <div class="ic-num">25<small>mentees</small></div>
+            <p>GEEKS Cohort 4 participants mentored in health informatics, data management and governance; programme reported a 20% gain in data-management skills.</p>
+            <div class="ic-foot"><span class="ctx">Mentorship</span><a href="research.html#teaching">Teaching <i class="bi bi-arrow-right"></i></a></div>
+          </li>
         </ul>
       </div>
     </section>
